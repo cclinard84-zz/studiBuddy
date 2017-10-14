@@ -8,6 +8,16 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('about');
+  this.route('sign-up');
+  this.route('sign-up-complete');
+  this.route('sign-up-failure');
+  this.route('class-list');
+  this.route('create-group');
+  this.route('create-group-success');
+  this.route('create-group-failure');
+  this.route('join-group');
+  this.route('join-group-success');
+  this.route('join-group-failure');
 });
 
 export default Router;
