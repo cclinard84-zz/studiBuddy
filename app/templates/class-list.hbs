@@ -1,1 +1,42 @@
+<html lang="en">
+<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+<script src='lib/jquery.min.js'></script>
+<script src='lib/moment.min.js'></script>
+<script src='fullcalendar/fullcalendar.js'></script>
+<head>
+  <script>
+    $(document).ready(function() {
+      // page is now ready, initialize the calendar...
+      $('#calendar').fullCalendar({
+        // put your options and callbacks here
+      })
+    });
+  </script>
+  <style>
+    body {
+      background-color: #2185D0;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ui grid">
+    <div class="one column row">
+      <div class="column">
+        <img src="images/studiBuddyLogo.png" style="width:100px" />
+      </div>
+    </div>
+    <br><br><br><br><br>
+    <div class="two column row">
+      <div class="three wide column"></div>
+      <div class="ten wide column" style="text-align:center;">
+        <div id='calendar'>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
 {{outlet}}
