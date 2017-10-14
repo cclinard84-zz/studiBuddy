@@ -1,0 +1,16 @@
+<div class="ui icon menu" style="height:36px; margin-bottom:0;">
+  <a class="item" {{action 'toggleSidebar'}}>
+    <i class="sidebar icon"></i>
+  </a>
+</div>
+<div class="ui pushable segment base-sidebar-context" style="height: calc(100vh - 40px); margin-top: 0; padding-top: 0px;">
+  {{#ui-sidebar class="menu left vertical" context=".base-sidebar-context" id="base-sidebar"}}
+    {{#link-to 'index' class="item" click=(action 'clickedLink')}}Home{{/link-to}}
+    {{#link-to 'about' class="item" click=(action 'clickedLink')}}About{{/link-to}}
+  {{/ui-sidebar}}
+  <div class="pusher" style="height:100%; overflow-y: auto;">
+    <div class="ui container" style="height:100%">
+      {{yield}}
+    </div>
+  </div>
+</div>
