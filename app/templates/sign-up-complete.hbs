@@ -1,1 +1,33 @@
-{{outlet}}
+<html lang="en">
+
+<head>
+  <style>
+
+    body {
+      background-color: #2185D0;
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="ui grid">
+    <div class="one column row">
+      <div class="column">
+        <img src="images/studiBuddyLogo.png" style="width:100px"/>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="two column row">
+      <div class="three wide column"></div>
+      <div class="ten wide column" style="text-align:center;">
+          <h1>Signup Complete!</h1>
+          {{#link-to 'index'}} <button class="ui blue floated button" style="height: 38px; width: 150px; border: #ffffff; border-style: solid; border-width: 1px;">Back to Login</button> {{/link-to}}
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
+  {{outlet}}

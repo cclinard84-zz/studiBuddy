@@ -1,133 +1,68 @@
 <html>
+
 <head>
-  <title>studiBuddy - Home</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-
-    .row.content {
-      height: 1500px
-    }
-
-    /* Set gray background color and 100% height */
-
-    .sidenav {
-      background-color:#2185D0;
-      height: 100%;
-    }
-
-    /* Set background color and white text */
-
     body {
       background-color: #2185D0;
       color: white;
-    }
-
-    /* All links will be white with no decoration*/
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-
-    /* All link hover text will be white with no decoration*/
-
-    a:hover {
-      color: white;
-      text-decoration: none;
-    }
-
-    /*set panel text to studiBuddy blue*/
-
-    .panel {
-      color: #2185D0;
-    }
-
-    /*set background colors of buttons to studiBuddy blue and text to white*/
-
-    .btn {
-      background-color: #2185D0;
-      color: white;
-    }
-
-    /*set background color to white and text to studiBuddy blue on hover*/
-
-    .btn:hover {
-      background-color: white;
-      color: #2185D0;
-    }
-
-    /* On small screens, set height to 'auto' for sidenav and grid */
-
-    @media screen and (max-width: 1200px) {
-      .sidenav {
-        height:225px;
-        padding: 15px;
-      }
-      .row.content {
-        height: auto;
-      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row content">
-      <div class="col-sm-2 sidenav">
-        <br>
-        <a href="index.html"><img src="images/studiBuddyLogo.png" class="img-responsive"></a>
+  <div class="ui grid">
+    <div class="two column row">
+      <div class="five wide column">
+        {{#link-to 'index'}}<img src="images/studiBuddyLogo.png" style="width:100px;"/>{{/link-to}}
       </div>
-      <form class="form-inline">
-        <div class="col-sm-2 col-sm-offset-4 input-group">
-          <div class="ui left icon input" style="color: #2185D0">
-            <input type="text" placeholder="Username">
-            <i class="users icon"></i>
-          </div>
+      <div class="eleven wide column right aligned">
+        <div class="ui left icon input" style="color: #2185D0;">
+          <input type="text" placeholder="Username">
+          <i class="users icon"></i>
         </div>
         <div class="ui left icon input">
           <input type="password" placeholder="Password">
-          <i class="unlock alternate icon" style="color: #2185D0"></i>
+          <i class="lock icon" style="color: #2185D0"></i>
         </div>
-          <button class="ui blue button" style="border: #ffffff; border-style: solid; border-width: 1px;">Login</button>
-      <button class="ui blue button" style="border: #ffffff; border-style: solid; border-width: 1px;">Sign up</button>
-      </form>
+      {{#link-to 'class-list'}}  <button class="ui blue floated button" style="height: 38px; width: 100px; border: #ffffff; border-style: solid; border-width: 1px;">Login</button> {{/link-to}}
+      {{#link-to 'sign-up'}}  <button class="ui blue floated button" style="height: 38px; width: 100px; border: #ffffff; border-style: solid; border-width: 1px;">Sign up</button>  {{/link-to}}
+      </div>
+    </div>
 
-      <div class="col-md-8">
-        <!-- Put inlaid news well here -->
-        <br>
-        <div class="well well-md">
-          <div class="panel panel-heading">
-            <h1>Welcome</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend lacus in dapibus varius. Nullam imperdiet arcu orci, sit amet dictum purus viverra id. Suspendisse consectetur libero erat, quis porta dolor vulputate eget. Maecenas
+    <div class=" three column row">
+      <div class=" three wide column"></div>
+      <div class ="ten wide column center aligned" style="text-align:left;">
+        <div class="ui segments" >
+        <div class="ui segment" style="color:#2185D0">
+          <h1>Welcome</h1>
+          <p><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend lacus in dapibus varius. Nullam imperdiet arcu orci, sit amet dictum purus viverra id. Suspendisse consectetur libero erat, quis porta dolor vulputate eget. Maecenas
+            risus augue, dignissim ac nisi id, laoreet ultricies justo. Ut vitae lorem mi. Vivamus vitae bibendum ante, eu efficitur metus. Nulla lacinia posuere imperdiet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Duis pellentesque, justo nec ultricies hendrerit, felis sem convallis diam, sed laoreet neque sapien in neque. Integer non egestas dolor, in maximus nunc. Integer dictum justo accumsan massa gravida, a varius neque hendrerit. Mauris
+            enim mauris, egestas ac consectetur scelerisque, semper at mauris. Sed pretium urna id tincidunt ornare. Mauris sed pharetra neque. Ut dolor dui, tempor vitae augue id, feugiat convallis diam.
+            </h5></p>
+        </div>
+          <div class="ui segment" style="color:#2185D0">
+            <h1>More News</h1>
+            <p><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend lacus in dapibus varius. Nullam imperdiet arcu orci, sit amet dictum purus viverra id. Suspendisse consectetur libero erat, quis porta dolor vulputate eget. Maecenas
               risus augue, dignissim ac nisi id, laoreet ultricies justo. Ut vitae lorem mi. Vivamus vitae bibendum ante, eu efficitur metus. Nulla lacinia posuere imperdiet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
               mus. Duis pellentesque, justo nec ultricies hendrerit, felis sem convallis diam, sed laoreet neque sapien in neque. Integer non egestas dolor, in maximus nunc. Integer dictum justo accumsan massa gravida, a varius neque hendrerit. Mauris
-              enim mauris, egestas ac consectetur scelerisque, semper at mauris. Sed pretium urna id tincidunt ornare. Mauris sed pharetra neque. Ut dolor dui, tempor vitae augue id, feugiat convallis diam.</p>
+              enim mauris, egestas ac consectetur scelerisque, semper at mauris. Sed pretium urna id tincidunt ornare. Mauris sed pharetra neque. Ut dolor dui, tempor vitae augue id, feugiat convallis diam.
+            </h5></p>
           </div>
-          <br>
-          <div class="panel panel-heading">
-            <h1>Some News</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend lacus in dapibus varius. Nullam imperdiet arcu orci, sit amet dictum purus viverra id. Suspendisse consectetur libero erat, quis porta dolor vulputate eget. Maecenas
-              risus augue, dignissim ac nisi id, laoreet ultricies justo. Ut vitae lorem mi. Vivamus vitae bibendum ante, eu efficitur metus. Nulla lacinia posuere imperdiet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-              mus. Duis pellentesque, justo nec ultricies hendrerit, felis sem convallis diam, sed laoreet neque sapien in neque. Integer non egestas dolor, in maximus nunc. Integer dictum justo accumsan massa gravida, a varius neque hendrerit. Mauris
-              enim mauris, egestas ac consectetur scelerisque, semper at mauris. Sed pretium urna id tincidunt ornare. Mauris sed pharetra neque. Ut dolor dui, tempor vitae augue id, feugiat convallis diam.</p>
-          </div>
-          <br>
-          <div class="panel panel-heading">
+          <div class="ui segment" style="color:#2185D0">
             <h1>Some More News</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend lacus in dapibus varius. Nullam imperdiet arcu orci, sit amet dictum purus viverra id. Suspendisse consectetur libero erat, quis porta dolor vulputate eget. Maecenas
+            <p><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend lacus in dapibus varius. Nullam imperdiet arcu orci, sit amet dictum purus viverra id. Suspendisse consectetur libero erat, quis porta dolor vulputate eget. Maecenas
               risus augue, dignissim ac nisi id, laoreet ultricies justo. Ut vitae lorem mi. Vivamus vitae bibendum ante, eu efficitur metus. Nulla lacinia posuere imperdiet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
               mus. Duis pellentesque, justo nec ultricies hendrerit, felis sem convallis diam, sed laoreet neque sapien in neque. Integer non egestas dolor, in maximus nunc. Integer dictum justo accumsan massa gravida, a varius neque hendrerit. Mauris
-              enim mauris, egestas ac consectetur scelerisque, semper at mauris. Sed pretium urna id tincidunt ornare. Mauris sed pharetra neque. Ut dolor dui, tempor vitae augue id, feugiat convallis diam.</p>
+              enim mauris, egestas ac consectetur scelerisque, semper at mauris. Sed pretium urna id tincidunt ornare. Mauris sed pharetra neque. Ut dolor dui, tempor vitae augue id, feugiat convallis diam.
+              </h5></p>
           </div>
         </div>
       </div>
+      <div class="three wide column"></div>
     </div>
   </div>
 </body>
+
 </html>
 {{outlet}}
