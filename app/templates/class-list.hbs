@@ -1,17 +1,7 @@
 <html lang="en">
-<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
-<script src='lib/jquery.min.js'></script>
-<script src='lib/moment.min.js'></script>
-<script src='fullcalendar/fullcalendar.js'></script>
+
 <head>
-  <script>
-    $(document).ready(function() {
-      // page is now ready, initialize the calendar...
-      $('#calendar').fullCalendar({
-        // put your options and callbacks here
-      })
-    });
-  </script>
+
   <style>
     body {
       background-color: #2185D0;
@@ -24,15 +14,13 @@
   <div class="ui grid">
     <div class="one column row">
       <div class="column">
-      {{#link-to 'index'}} <img src="images/studiBuddyLogo.png" style="width:100px" />{{/link-to}}
+        {{#link-to 'index'}} <img src="images/studiBuddyLogo.png" style="width:100px" />{{/link-to}}
       </div>
     </div>
     <br><br><br><br><br>
     <div class="two column row">
       <div class="three wide column"></div>
       <div class="ten wide column" style="text-align:center;">
-        <div id='calendar'>
-        </div>
       </div>
     </div>
   </div>
