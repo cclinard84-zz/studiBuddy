@@ -1,7 +1,53 @@
 <html lang="en">
 
 <head>
+  <script>
+    $(document).ready(function() {
 
+      $('#calendar').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,basicWeek,basicDay'
+        },
+        defaultDate: '2017-10-14',
+        navLinks: true, // can click day/week names to navigate views
+        editable: true,
+        eventLimit: true, // allow "more" link when too many events
+        events: [{
+            id: 999,
+            title: 'CITC-2375 Study Group',
+            start: '2017-10-12T16:00:00'
+          },
+          {
+            id: 999,
+            title: 'CITC-2311',
+            start: '2017-10-16T16:00:00'
+          },
+          {
+            id: 999,
+            title: 'CITC-2311',
+            start: '2017-10-18T16:00:00'
+          },
+          {
+            id: 999,
+            title: 'CITC-2311',
+            start: '2017-10-21T16:00:00'
+          },
+          {
+            id: 999,
+            title: 'CITC-2311',
+            start: '2017-10-25T16:00:00'
+          },
+        ]
+      });
+
+      $('.ui.dropdown')
+          .dropdown()
+;
+
+    });
+  </script>
   <style>
     body {
       background-color: #2185D0;
@@ -20,7 +66,41 @@
     <br><br><br><br><br>
     <div class="two column row">
       <div class="three wide column"></div>
-      <div class="ten wide column" style="text-align:center;">
+      <div class="eleven wide column" style="text-align:center; color:white; background-color:white">
+        <div class="ui container">
+          <div class="ui menu">
+            <div class="header item"></div>
+            <a class="active item">Link</a>
+            <a class="item">Link</a>
+            <div class="ui dropdown item">
+              Dropdown
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item">Action</div>
+                <div class="item">Another Action</div>
+                <div class="item">Something else here</div>
+                <div class="divider"></div>
+                <div class="item">Separated Link</div>
+                <div class="divider"></div>
+                <div class="item">One more separated link</div>
+              </div>
+            </div>
+            <div class="right menu">
+              <div class="item">
+                  {{#link-to 'create-group-success'}}<button class="ui button">Create Group</button>{{/link-to}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br/>
+        <div class="ui container">
+          <div class="ui grid">
+            <div class="ui sixteen column" style="color:white">
+              <div id="calendar" ></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

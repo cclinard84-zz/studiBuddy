@@ -1,6 +1,7 @@
 {
   "name": "studi-buddy",
   "dependencies": {
-    "semantic-ui": "^2.2.13"
+    "semantic-ui": "^2.2.13",
+    "fullcalendar": "^3.6.1"
   }
 }
